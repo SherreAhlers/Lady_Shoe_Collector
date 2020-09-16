@@ -4,10 +4,12 @@
 
 {% for shoe in shoes %}
 <div class="card">
-    <div class="card-content">
-        <span class="card-title">{{ shoe.name }}</span>
-        <p>Type: {{ shoe.shoe_type }}</p>
-        <p>Description: {{ shoe.description }}</p>
-    </div>
+    <a href="{% url 'detail' shoe.id %}">
+        <div class="card-content">
+            <span class="card-title">{{ shoe.name }}</span>
+            <p>Type: {{ shoe.shoe_type }}</p>
+            <p>Description: {{ shoe.description }}</p>
+        </div>
+    </a>
 </div>
 {% endfor %} {% endblock %}
