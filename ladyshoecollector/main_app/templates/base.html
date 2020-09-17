@@ -9,6 +9,7 @@
     <title>Lady Shoe Collector</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
 </head>
 
@@ -20,8 +21,12 @@
                     <li><a href="/" class="left brand-logo">&nbsp;&nbsp;LadyShoeCollector</a></li>
                 </ul>
                 <ul class="right">
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/shoes">View All My Shoes</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'outfits_create' %}">Add an Outfit</a></li>
+                    <li><a href="{% url 'outfits_index' %}">View All Outfits</a></li>
+                    <li><a href="{% url 'shoes_create' %}">Add Shoes</a></li>
+                    <li><a href="{% url 'index' %}">View All My Shoes</a></li>
+
                 </ul>
             </div>
         </nav>
